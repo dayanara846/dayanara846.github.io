@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research — Dayanara M. Diaz Vargas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-name"><a href="index.html">Dayanara M. Diaz Vargas</a></div>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="research.html" class="active">Research</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="cv.html">CV</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <!-- Working Papers -->
+  <h2 class="section-title">Working Papers</h2>
+
+  <!-- JMP -->
+  <div class="paper">
+    <div class="paper-status">Job Market Paper</div>
+    <div class="paper-title">
+      Healthcare Privatization Effect on Labor Markets: Evidence from Puerto Rico
+    </div>
+    <div class="paper-links">
+      <a href="DiazVargas_JMP.pdf">Paper (PDF)</a>
+      <button class="abstract-toggle" onclick="toggleAbstract(this)">+ Abstract</button>
+    </div>
+    <div class="paper-abstract" style="display:none;">
+      <!--
+        ★ CUSTOMIZE: Replace this with your polished abstract.
+        The text below is a draft drawn from your CV description.
+      -->
+      This paper employs a difference-in-differences framework to estimate the
+      effects of mandatory managed care restrictions implemented during Puerto
+      Rico's 1993 healthcare reform. The reform replaced the island's
+      unrestricted universal healthcare model with a privatized system,
+      introducing closed provider networks, mandatory gate-keeping
+      requirements, and capitation-based payment structures that shifted
+      financial risk to providers. Exploiting the staggered rollout of the
+      reform across 78 municipalities in five cohorts from 1994 to 2000,
+      I identify causal effects on healthcare labor markets, patient
+      utilization patterns, and health outcomes.
+    </div>
+  </div>
+
+  <!-- Second paper -->
+  <div class="paper">
+    <div class="paper-title">
+      Corporate Tax Incentives Elimination: Evidence from Puerto Rico
+    </div>
+    <div class="paper-links">
+      <a href="DiazVargas_Section936.pdf">Paper (PDF)</a>
+      <button class="abstract-toggle" onclick="toggleAbstract(this)">+ Abstract</button>
+    </div>
+    <div class="paper-abstract" style="display:none;">
+      <!--
+        ★ CUSTOMIZE: Replace with your polished abstract.
+        The text below is drawn from your CV description.
+      -->
+      This paper fills a gap in the place-based policy literature by examining
+      the consequences of withdrawing industrial incentives—a question largely
+      unexplored despite extensive research on policy implementation. The
+      project exploits the phase-out and elimination of IRS Section 936 in
+      Puerto Rico, which exempted U.S. corporations from federal taxes on
+      island profits, as a quasi-experimental shock to identify causal effects
+      on local labor markets. Using synthetic difference-in-differences, we
+      estimate the effect of lifting this policy on local labor market outcomes.
+      Our findings reveal that the phaseout (1996) and eventual elimination
+      (2006) led to significant manufacturing job losses, with the phaseout
+      generating an average decrease of approximately 9.2% in manufacturing
+      employment by 2000 and an average decrease of 28% following elimination
+      by 2019, relative to a counterfactual in which the policy remained.
+    </div>
+  </div>
+
+
+  <!-- Work in Progress -->
+  <!--
+    ★ CUSTOMIZE: Uncomment and fill in if you have additional work in progress.
+  -->
+  <!--
+  <h2 class="section-title">Work in Progress</h2>
+
+  <div class="paper">
+    <div class="paper-title">[Paper Title]</div>
+    <div class="paper-with">with [Coauthor Name(s)]</div>
+  </div>
+  -->
+
+</div>
+
+<footer>
+  &copy; 2026 Dayanara M. Diaz Vargas
+</footer>
+
+<script>
+function toggleAbstract(btn) {
+  const abs = btn.closest('.paper').querySelector('.paper-abstract');
+  if (abs.style.display === 'none') {
+    abs.style.display = 'block';
+    btn.textContent = '– Abstract';
+  } else {
+    abs.style.display = 'none';
+    btn.textContent = '+ Abstract';
+  }
+}
+</script>
+
+</body>
+</html>
