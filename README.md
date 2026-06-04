@@ -73,7 +73,7 @@ Go to `https://[your-username].github.io` — live within 1–2 minutes.
 
 ## Step 3: Custom domain (optional, ~$12/year)
 
-1. Buy a domain from Namecheap, Cloudflare, or similar
+1. Buy a domain from Namecheap
 2. In GitHub: Settings → Pages → Custom domain → type your domain → Save
 3. At the registrar, add DNS records:
    - A records: 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153
