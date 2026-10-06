@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Research — Dayanara M. Diaz Vargas</title>
+  <title>Research | Dayanara M. Diaz Vargas</title>
+  <meta name="description" content="Research by Dayanara M. Diaz Vargas on healthcare privatization, corporate tax incentives, and physician migration in Puerto Rico.">
+  <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -11,116 +13,146 @@
 </head>
 <body>
 
-<nav>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<nav aria-label="Main">
   <div class="nav-inner">
     <div class="nav-name"><a href="index.html">Dayanara M. Diaz Vargas</a></div>
-    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+    <button class="hamburger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-menu">
       <span></span><span></span><span></span>
     </button>
-    <div class="nav-links">
+    <div class="nav-links" id="site-menu">
       <a href="index.html">Home</a>
-      <a href="research.html" class="active">Research</a>
+      <a href="research.html" class="active" aria-current="page">Research</a>
       <a href="teaching.html">Teaching</a>
       <a href="cv.html">CV</a>
     </div>
   </div>
 </nav>
 
-<div class="container">
+<main id="main" class="container">
 
-  <!-- Working Papers -->
-  <h2 class="section-title">Working Papers</h2>
+  <header class="page-intro">
+    <h1 class="page-title">Research</h1>
+    <p>
+      I study how government policies affect economic opportunity and access to
+      public services in historically marginalized communities, with a focus on
+      Puerto Rico. My research statement describes these papers and my next
+      projects on public safety, tax incentives, and physician supply.
+    </p>
+    <a class="btn" href="DiazVargas_ResearchStatement.pdf">Research statement (PDF)</a>
+  </header>
 
-  <!-- JMP -->
-  <div class="paper">
-    <div class="paper-status">Job Market Paper</div>
-    <div class="paper-title">
-      Healthcare Privatization Effect on Labor Markets: Evidence from Puerto Rico
-    </div>
-    <div class="paper-links">
-      <a href="DiazVargas_JMP.pdf">Paper (PDF)</a>
-      <button class="abstract-toggle" onclick="toggleAbstract(this)">+ Abstract</button>
-    </div>
-    <div class="paper-abstract" style="display:none;">
-      <!--
-        ★ CUSTOMIZE: Replace this with your polished abstract.
-        The text below is a draft drawn from your CV description.
-      -->
-      This paper employs a difference-in-differences framework to estimate the
-      effects of mandatory managed care restrictions implemented during Puerto
-      Rico's 1993 healthcare reform. The reform replaced the island's
-      unrestricted universal healthcare model with a privatized system,
-      introducing closed provider networks, mandatory gate-keeping
-      requirements, and capitation-based payment structures that shifted
-      financial risk to providers. Exploiting the staggered rollout of the
-      reform across 78 municipalities in five cohorts from 1994 to 2000,
-      I identify causal effects on healthcare labor markets, patient
-      utilization patterns, and health outcomes.
-    </div>
-  </div>
+  <!-- Job market paper: abstract open by default -->
+  <section class="block" aria-labelledby="jmp-heading">
+    <h2 class="section-title" id="jmp-heading">Job market paper</h2>
 
-  <!-- Second paper -->
-  <div class="paper">
-    <div class="paper-title">
-      Corporate Tax Incentives Elimination: Evidence from Puerto Rico
-    </div>
-    <div class="paper-links">
-      <a href="DiazVargas_Section936.pdf">Paper (PDF)</a>
-      <button class="abstract-toggle" onclick="toggleAbstract(this)">+ Abstract</button>
-    </div>
-    <div class="paper-abstract" style="display:none;">
-      <!--
-        ★ CUSTOMIZE: Replace with your polished abstract.
-        The text below is drawn from your CV description.
-      -->
-      This paper fills a gap in the place-based policy literature by examining
-      the consequences of withdrawing industrial incentives—a question largely
-      unexplored despite extensive research on policy implementation. The
-      project exploits the phase-out and elimination of IRS Section 936 in
-      Puerto Rico, which exempted U.S. corporations from federal taxes on
-      island profits, as a quasi-experimental shock to identify causal effects
-      on local labor markets. Using synthetic difference-in-differences, we
-      estimate the effect of lifting this policy on local labor market outcomes.
-      Our findings reveal that the phaseout (1996) and eventual elimination
-      (2006) led to significant manufacturing job losses, with the phaseout
-      generating an average decrease of approximately 9.2% in manufacturing
-      employment by 2000 and an average decrease of 28% following elimination
-      by 2019, relative to a counterfactual in which the policy remained.
-    </div>
-  </div>
+    <article class="paper" id="jmp">
+      <h3 class="paper-title">
+        Healthcare Privatization and Patient Health: Evidence from Puerto Rico
+      </h3>
+      <div class="paper-links">
+        <a href="DiazVargas_JMP.pdf">Paper (PDF)</a>
+        <button class="abstract-toggle" type="button" aria-expanded="true" aria-controls="abstract-jmp">Hide abstract</button>
+      </div>
+      <div class="paper-abstract" id="abstract-jmp">
+        <p>
+          Public health systems increasingly buy care from private providers:
+          the U.S. Veterans Health Administration more than doubled such
+          spending in <span class="nowrap">2014–2021</span> (Congressional Budget Office, 2021), New
+          Zealand’s private share of publicly funded elective procedures nearly
+          doubled from <span class="nowrap">2011–12</span> to <span class="nowrap">2023–24</span> (Radio New Zealand, 2026), and
+          England’s health department bought £24.1 billion of care outside the
+          NHS in <span class="nowrap">2024–25</span> (National Audit Office, 2026). Yet little is known about
+          how patients fare when a publicly financed health system moves
+          entirely from public provision to private management. To study this
+          shift at full scale, we examine Puerto Rico’s <span class="nowrap">1994–2000</span> health reform,
+          which changed facility ownership, provider payment incentives,
+          eligibility, and access. Exploiting the reform’s staggered rollout
+          across counties, we find that it raised all-cause mortality by 3.7
+          percent. The increase is accompanied by lower ambulatory-care
+          employment, fewer hospitals, and lower use of early prenatal care,
+          consistent with reduced provider capacity and access to timely care as
+          possible mechanisms. These findings suggest that a broad shift toward
+          privately managed care may harm patient health.
+        </p>
+      </div>
+    </article>
+  </section>
 
+  <!-- Working papers -->
+  <section class="block" aria-labelledby="wp-heading">
+    <h2 class="section-title" id="wp-heading">Working papers</h2>
 
-  <!-- Work in Progress -->
-  <!--
-    ★ CUSTOMIZE: Uncomment and fill in if you have additional work in progress.
-  -->
-  <!--
-  <h2 class="section-title">Work in Progress</h2>
+    <article class="paper">
+      <h3 class="paper-title">
+        Corporate Tax Incentives Retraction: Evidence from Puerto Rico
+      </h3>
+      <div class="paper-links">
+        <a href="DiazVargas_Section936.pdf">Paper (PDF)</a>
+        <button class="abstract-toggle" type="button" aria-expanded="false" aria-controls="abstract-936">Show abstract</button>
+      </div>
+      <div class="paper-abstract is-collapsed" id="abstract-936">
+        <p>
+          We know much about the effects of introducing place-based tax
+          incentives for corporations. Given how costly these incentives are, we
+          know surprisingly little about their effects once they are retracted.
+          To fill this gap, this paper studies the retraction of one of the
+          costliest corporate tax incentives in the United States, Section 936 of
+          the U.S. Internal Revenue Code. This incentive exempted U.S.
+          corporations from federal tax on income earned in Puerto Rico from 1976
+          until Congress phased it out beginning in 1996 and eliminated it in
+          2006. Manufacturing claimed 98 percent of the tax credits and produced a
+          median 45.5 percent of island GDP at the time, making it one of the most
+          important industries in the economy. Using synthetic
+          difference-in-differences on employment data for Puerto Rico and U.S.
+          states, this paper estimates that manufacturing employment fell 9.2
+          percent by 2000, 13.3 percent by the close of the phase-out in 2005, and
+          28.0 percent by 2019, relative to the counterfactual. Results show no
+          return to baseline employment levels two decades later. The average
+          county-level decline is 13.6 percent, and reaches 18.2 percent in
+          high-poverty counties. This evidence leads us to conclude that even
+          after three decades of tax subsidy, the retraction of place-based tax
+          incentives fails to ignite self-sustaining industries.
+        </p>
+      </div>
+    </article>
+  </section>
 
-  <div class="paper">
-    <div class="paper-title">[Paper Title]</div>
-    <div class="paper-with">with [Coauthor Name(s)]</div>
-  </div>
-  -->
+  <!-- Work in progress: no PDF link, the draft is marked do not circulate -->
+  <section class="block" aria-labelledby="wip-heading">
+    <h2 class="section-title" id="wip-heading">Work in progress</h2>
 
-</div>
+    <article class="paper">
+      <h3 class="paper-title">
+        Physician Migration from Puerto Rico and the Health of Receiving Communities
+      </h3>
+      <p class="paper-with">with Jori Barash (University of Oregon)</p>
+      <div class="paper-links">
+        <button class="abstract-toggle" type="button" aria-expanded="false" aria-controls="abstract-physicians">Show abstract</button>
+      </div>
+      <div class="paper-abstract is-collapsed" id="abstract-physicians">
+        <p>
+          Does adding physicians improve health where they arrive? Physicians
+          choose where to practice, so comparisons across communities can
+          confound the effects of physician supply with differences in local
+          demand. We study the physicians who left Puerto Rico after Hurricane
+          Maria in September 2017 and propose each mainland county’s 2010 share
+          of residents born in Puerto Rico as an instrument for where they
+          settled. Outcomes include hospital use, preventable hospitalizations,
+          access to care, and mortality from 2012 to 2022. We also ask whether
+          effects are larger for Hispanic patients, as an indicator of homophily.
+        </p>
+      </div>
+    </article>
+  </section>
+
+</main>
 
 <footer>
-  &copy; 2026 Dayanara M. Diaz Vargas
+  &copy; 2026 Dayanara M. Diaz Vargas. <span class="nowrap">Updated October 2026.</span>
 </footer>
 
-<script>
-function toggleAbstract(btn) {
-  const abs = btn.closest('.paper').querySelector('.paper-abstract');
-  if (abs.style.display === 'none') {
-    abs.style.display = 'block';
-    btn.textContent = '– Abstract';
-  } else {
-    abs.style.display = 'none';
-    btn.textContent = '+ Abstract';
-  }
-}
-</script>
-
+<script src="site.js"></script>
 </body>
 </html>
